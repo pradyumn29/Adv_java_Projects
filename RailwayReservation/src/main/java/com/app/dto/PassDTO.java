@@ -38,9 +38,9 @@ public class PassDTO {
 	private String EndPoint;
 	@NotBlank
 	private LocalDateTime StartDateTime;
-	@NotBlank
+	@NotBlank     
 	private LocalDateTime EndDateTime;
-	@NotBlank
+	
 	private ReservationType SType;
 	private long AssignedRail;
 

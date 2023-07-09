@@ -10,6 +10,7 @@ public interface RailService {
 	List<Railway> getAllRail();
 	
 	String addRail(RailDTO Rail);
-	
+	String UpdateRail(long id,RailDTO rail);
+	String deleteRail(long id);
 
 }

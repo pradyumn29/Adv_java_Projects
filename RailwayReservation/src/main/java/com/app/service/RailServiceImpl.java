@@ -34,6 +34,23 @@ public class RailServiceImpl implements RailService {
 		
 		return "inserted Railway";
 	}
+
+	@Override
+	public String UpdateRail(long id, RailDTO rail) {
+	Railway rw=Rrepo.findById(id).orElseThrow();
+	Railway rwt=Mapper.map(rail, Railway.class);
+	rw.setRName(rwt.getRName());
+		return "updated Succesfully";
+	}
+
+	@Override
+	public String deleteRail(long id) {
+		if(Rrepo.existsById(id)) {
+			Rrepo.deleteById(id);
+		}
+		
+		return "deleted";
+	}
 	
 	
 
